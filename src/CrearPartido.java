@@ -2,7 +2,9 @@
 import java.awt.event.KeyEvent;
 
 
-
+/*
+@param Crea una clase para crear mas partidos
+*/
 public class CrearPartido extends javax.swing.JFrame
 {
    
@@ -70,6 +72,9 @@ public class CrearPartido extends javax.swing.JFrame
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+/*
+@param Crea una clase para añadir partidos    
+*/
     public void añadePartido(String p)
     {
         v.partidoNuevo(p);
