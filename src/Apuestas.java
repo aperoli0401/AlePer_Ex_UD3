@@ -9,6 +9,9 @@ import javax.swing.WindowConstants;
  * and open the template in the editor.
  */
 
+/*
+@param Crea la clase apuestas
+*/
 public class Apuestas extends javax.swing.JFrame {
 
    
@@ -120,7 +123,9 @@ public class Apuestas extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+/*
+@param Crea la variable para generar una nueva accion    
+ */
     private void bNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bNuevoActionPerformed
         CrearPartido agregarpartido = new CrearPartido(this);
         agregarpartido.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
@@ -140,12 +145,17 @@ public class Apuestas extends javax.swing.JFrame {
         this.listaResultados.setModel(modelovacio);
     }//GEN-LAST:event_bResetearActionPerformed
 
-   
+/*
+@return se encarga de devolver un calculo matematico    
+*/
     public int cualquiera(int n1, int n2)
     {
         return (int)Math.floor((Math.random()*(n2-n1+1) + n1));
     }
-    
+
+/*
+@param Genera una clase para realizar la accion    
+*/
     private void bRealizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRealizarActionPerformed
         DefaultListModel modeloquinielaresuelta = new DefaultListModel();
 
@@ -172,7 +182,9 @@ public class Apuestas extends javax.swing.JFrame {
         this.listaResultados.setModel(modeloquinielaresuelta);
     }//GEN-LAST:event_bRealizarActionPerformed
 
-    
+/*
+@param Genera una clase para generar un partido nuevo    
+*/
     public void partidoNuevo(String partido)
     {
         DefaultListModel modelonuevo = new DefaultListModel();
@@ -186,7 +198,9 @@ public class Apuestas extends javax.swing.JFrame {
         this.listaQuiniela.setModel(modelonuevo);
     }
     
-  
+/*
+@param crea una clase para borrar los partidos    
+*/
     public void borrarPartido(int indice)
     {
         DefaultListModel modelonuevoquiniela = new DefaultListModel();
